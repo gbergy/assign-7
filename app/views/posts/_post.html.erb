@@ -1,0 +1,12 @@
+<br>
+<section>
+<strong><%=post.title%></strong>
+<br>
+<%=post.body%>
+<br>
+<%=post.created_at%>
+<br>
+Post #<%=post.id%>, Created by: <%=@user.fname%>
+<br>
+<%=link_to_unless_current "View", user_post_path(post.user, post)%>
+</section>

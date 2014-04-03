@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UserAuth</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<nav>
+		<%= render "shared/nav" %>
+	</nav>
+	<br>
+
+	<% if flash[:notice] %>
+		<div class="flash notice">
+		<%=flash[:notice] %>
+		</div>
+	<% end %>
+
+	<% if flash[:alert] %>
+		<div class="flash alert">
+		<%=flash[:alert] %>
+		</div>
+	<% end %>
+	
+	
+
+<%= yield %>
+
+</body>
+</html>

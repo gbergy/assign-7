@@ -1,0 +1,19 @@
+<h1>Edit Profile</h1>
+
+<br>
+
+<%= form_for current_user, html: {method: :put} do |f| %>
+  <%=f.label :fname, "First Name" %>
+  <%=f.text_field :fname %>
+  <br>
+  <%=f.label :lname, "Last Name" %>
+  <%=f.text_field :lname %>
+  <br>
+  <%=f.label :email, "Email" %>
+  <%=f.text_field :email %>
+  <br>
+  <%=f.label :password, "Password"%>
+  <%=f.password_field :password %>
+  <br>
+  <%=f.submit :update %>
+<% end %>

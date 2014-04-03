@@ -1,0 +1,8 @@
+<h1>Posts List</h1>
+<%=link_to "Back to Profile", user_path(current_user)%> <!-- current_user = :user_id -->
+
+<div>
+<% @posts.each do |post| %>
+	<%=render "post", post: post %>
+<% end %>
+</div>

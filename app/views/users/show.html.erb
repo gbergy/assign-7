@@ -1,0 +1,13 @@
+<h1>User Profile</h1>
+
+<%=current_user.fname%>
+<br>
+<%=current_user.lname%>
+<br>
+<%=current_user.email%>
+<br>
+<li><%=link_to "View Posts", user_posts_path(current_user)%></li> <!-- current_user = :user_id -->
+<li><%=link_to "Create Post", new_user_post_path(current_user)%></li> <!-- current_user = :user_id -->
+<br>
+<li><%=link_to "Edit Profile", edit_user_path%></li>
+<li><%=link_to "Delete Profile", user_path(params[:id]), data: {confirm: "Are you sure?"}, method: :delete%></li>

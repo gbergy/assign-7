@@ -1,0 +1,7 @@
+<h1>Specific post</h1>
+<%=link_to "Back to Posts", user_posts_path(current_user)%> <!-- current_user = :user_id -->
+<br>
+
+<%=render "post", post: @post %>
+<%=link_to "Edit Post", edit_user_post_path(@post.user, @post)%>
+<%=link_to "Delete Post", user_post_path(@post.user, @post), data: {confirm: "Are you sure?"}, method: :delete%></li>
